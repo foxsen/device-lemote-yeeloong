@@ -26,4 +26,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/full_yeeloong.mk
+	$(LOCAL_DIR)/yeeloong.mk

@@ -11,7 +11,7 @@ TARGET_NO_RECOVERY := true
 
 #TARGET_NO_KERNEL := true
 
-BOARD_USES_GENERIC_AUDIO := false
+#BOARD_USES_GENERIC_AUDIO := true
 BOARD_USES_ALSA_AUDIO := true
 BUILD_WITH_ALSA_UTILS := true
 
@@ -48,3 +48,10 @@ BOARD_EGL_CFG := device/lemote/yeeloong/egl.cfg
 endif
 
 BOARD_GPU_DRIVERS := r600g
+
+# This enables the wpa wireless driver
+BOARD_WPA_SUPPLICANT_DRIVER ?= NL80211
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB ?= private_lib_driver_cmd
+WPA_SUPPLICANT_VERSION ?= VER_0_8_X
+#WIFI_DRIVER_MODULE_PATH ?= auto
+

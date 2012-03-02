@@ -6,9 +6,10 @@ PRODUCT_PROPERTY_OVERRIDES := \
     wifi.supplicant_scan_interval=15
 
 PRODUCT_COPY_FILES += \
-	device/lemote/yeeloong/vold.conf:system/etc/vold.conf \
+	device/lemote/yeeloong/vold.fstab:system/etc/vold.fstab \
 	device/lemote/yeeloong/asound.conf:system/etc/asound.conf \
         device/lemote/yeeloong/init.rc:root/init.rc \
+        device/lemote/yeeloong/init.sh:root/init.sh \
         device/lemote/yeeloong/yeeloong-keys.kl:system/usr/keylayout/cpcap-key.kl
 
 PRODUCT_COPY_FILES += \
