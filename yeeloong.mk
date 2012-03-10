@@ -17,8 +17,6 @@ $(call inherit-product, device/lemote/yeeloong/wifi.mk)
 
 PRODUCT_LOCALES := en_US zh_CN
 
-#PRODUCT_PACKAGES += PinyinIME
-
 PRODUCT_NAME := yeeloong
 PRODUCT_DEVICE := yeeloong
 PRODUCT_BRAND := lemote
