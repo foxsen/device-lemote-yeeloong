@@ -21,6 +21,10 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.usb.host.xml:system/etc/permissions/android.hardware.usb.host.xml \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
+# back light
+
+PRODUCT_PACKAGES += \
+    lights.yeeloong
 
 # Get the hardware acceleration libraries
 $(call inherit-product-if-exists,device/common/gpu/gpu_mesa.mk)
@@ -30,6 +34,9 @@ $(call inherit-product-if-exists,frameworks/base/data/sounds/AllAudio.mk)
 
 # Get the alsa files
 $(call inherit-product-if-exists,device/lemote/yeeloong/alsa.mk)
+
+# Get the wifi files
+$(call inherit-product-if-exists,device/lemote/yeeloong/wifi.mk)
 
 
 
