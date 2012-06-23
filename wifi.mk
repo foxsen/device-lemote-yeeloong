@@ -9,29 +9,8 @@
 #
 
 # the path of target's AndroidBoard.mk that includes this file
-TARGET_LOCAL_PATH := $(LOCAL_PATH)
-
 LOCAL_PATH := $(call my-dir)
 
-ifexist  = $(if $(wildcard $(1)),$(1),$(wildcard $(2)))
-cfgfile  = $(call ifexist,$(TARGET_LOCAL_PATH)/$(1),$(LOCAL_PATH)/$(1))
+PRODUCT_COPY_FILES += \
+    device/lemote/yeeloong/wpa_supplicant.conf:system/etc/wifi/wpa_supplicant.conf 
 
-define include-wpa-supplicant-conf
-LOCAL_PATH := $(1)
-include $$(CLEAR_VARS)
-LOCAL_MODULE := wpa_supplicant.conf
-LOCAL_MODULE_TAGS := optional
-LOCAL_MODULE_CLASS := ETC
-LOCAL_MODULE_PATH := $$(TARGET_OUT_ETC)/wifi
-LOCAL_SRC_FILES := $$(LOCAL_MODULE)
-LOCAL_PREBUILT_STRIP_COMMENTS := 1
-include $$(BUILD_PREBUILT)
-endef
-
-define add-wpa-supplicant-conf
-$(eval $(include-wpa-supplicant-conf))
-endef
-
-ifneq ($(BOARD_WPA_SUPPLICANT_DRIVER),)
-$(call add-wpa-supplicant-conf,$(dir $(call cfgfile,wpa_supplicant.conf)))
-endif
