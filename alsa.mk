@@ -44,7 +44,7 @@ PRODUCT_COPY_FILES := \
 	$(foreach f,$(copy_conf),$(LOCAL_ALSA_CONF_DIR)/$(f):$(TARGET_ALSA_CONF_DIR)/$(f)) \
 	$(foreach f,$(copy_init),$(LOCAL_ALSA_INIT_DIR)/$(f):$(TARGET_ALSA_CONF_DIR)/init/$(f))
 
-PRODUCT_PACKAGES := \
+PRODUCT_PACKAGES += \
     acoustics.default \
     alsa_ctl \
     alsa.default
