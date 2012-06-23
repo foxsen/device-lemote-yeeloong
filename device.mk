@@ -24,7 +24,8 @@ PRODUCT_COPY_FILES += \
 # back light
 
 PRODUCT_PACKAGES += \
-    lights.yeeloong
+    lights.yeeloong \
+    audio.primary.yeeloong
 
 # Get the hardware acceleration libraries
 $(call inherit-product-if-exists,device/common/gpu/gpu_mesa.mk)
