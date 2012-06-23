@@ -13,7 +13,6 @@ PRODUCT_PACKAGES := \
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 $(call inherit-product, device/lemote/yeeloong/device.mk)
-$(call inherit-product, device/lemote/yeeloong/wifi.mk)
 
 PRODUCT_LOCALES := en_US zh_CN
 
